@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('clone') {
+            steps{
+                git 'https://github.com/rathihimanshu/pullrequest'
+            }
+}
+	stage('Pre-Run'){
+	    steps{
+		sh "chmod +x script.sh"
+	    }
+}
+	stage('Build&Deploy'){
+	    steps{
+		sh "./script.sh"
+	    }
+}
+}
+}

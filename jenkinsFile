@@ -1,5 +1,5 @@
 pipeline {
-    agent 'maven:3.3.3'
+    agent any
     stages {
         stage('clone') {
             steps{

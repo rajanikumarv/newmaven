@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('clone') {
             steps{
-                git 'https://github.com/rathihimanshu/pullrequest'
+                git 'https://github.com/rajanikumarv/newmaven'
             }
 }
 	stage('Pre-Run'){
 	    steps{
-		sh "chmod +x script.sh"
+		sh "chmod +x deploy.sh"
 	    }
 }
 	stage('Build&Deploy'){
 	    steps{
-		sh "./script.sh"
+		sh "./deploy.sh"
 	    }
 }
 }
